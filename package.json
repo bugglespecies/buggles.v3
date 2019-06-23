@@ -4,7 +4,9 @@
   "description": "Buggles Website (Version 3)",
   "main": "./dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install": "npm install -d",
+    "compile:ts": "tsc",
+    "compile:haml": "ruby compile.rb"
   },
   "repository": {
     "type": "git",
