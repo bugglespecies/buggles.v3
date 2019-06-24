@@ -1,0 +1,25 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <% if(page.title !== 'home' || page.title !== ''){ %>
+        <title><%= page.title %> | <%= website.title %></title>
+        <meta name="description" content="<%= page.description %>">
+        <meta property="og:title" content="<%= page.title %> | <%= website.title %>">
+        <meta property="og:description" content="<%= page.description %>">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://buggles.ml/">
+        <meta name="twitter:card" content="summary_large_image">
+    <% }else{ %>
+        <title><%= website.title %></title>
+        <meta name="description" content="<%= wesite.description %>">
+        <meta property="og:title" content="<%= website.title %>">
+        <meta property="og:description" content="<%= website.description %>">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://buggles.ml/">
+        <meta name="twitter:card" content="summary_large_image">
+    <% } %>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
