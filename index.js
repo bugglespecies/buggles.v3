@@ -17,3 +17,9 @@ appCore.use(flash());
 appCore.use(bodyParse.urlencoded({ extended: true }));
 appCore.use(methodOverride('_method'));
 appCore.set('view engine', 'ejs');
+
+appCore.use((exprSession)({
+    secret: '1D8F7BA92-000FA1-D43838-78CCAF',
+    resave: false,
+    saveUninitialized: false
+}));
