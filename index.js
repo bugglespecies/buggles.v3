@@ -15,3 +15,4 @@ const io            = ioSockets(serverCore);
 appCore.use(helmet());
 appCore.use(flash());
 appCore.use(bodyParse.urlencoded({ extended: true }));
+appCore.set('view engine', 'ejs');
