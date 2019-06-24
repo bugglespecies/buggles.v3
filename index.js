@@ -9,6 +9,8 @@ const flash             = require('req-flash');
 const ioSockets         = require('socket.io');
 const methodOverride    = require('method-override');
 
+const config            = require('./configuration');
+
 const appCore           = express();
 const serverCore        = http.createServer(appCore);
 const io                = ioSockets(serverCore);
@@ -31,7 +33,9 @@ appCore.use(passport.initialize());
 appCore.use(passport.session());
 
 passport.use(new sDiscord.Strategy({
-    clientID: 
+    clientID: config.oauth2.discord.id,
+    clientSecret: config.oauth2.discord.secret,
+    callbackURL: 'http://localhost/auth/discord'
 }))
 
 passport.serializeUser((user, done)=>{
