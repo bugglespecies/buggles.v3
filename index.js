@@ -23,3 +23,6 @@ appCore.use((exprSession)({
     resave: false,
     saveUninitialized: false
 }));
+
+appCore.use(passport.initialize());
+appCore.use(passport.session());
