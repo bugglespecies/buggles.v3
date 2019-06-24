@@ -1,0 +1,32 @@
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="<%= website.color %>">
+<% if(page.title !== 'home' || page.title !== ''){ %>
+    <title><%= page.title %> | <%= website.title %></title>
+    <meta name="description" content="<%= page.description %>">
+    <meta property="og:title" content="<%= page.title %> | <%= website.title %>">
+    <meta property="og:description" content="<%= page.description %>">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://buggles.ml/">
+    <meta name="twitter:card" content="summary_large_image">
+<% } else{ %>
+    <title><%= website.title %></title>
+    <meta name="description" content="<%= wesite.description %>">
+    <meta property="og:title" content="<%= website.title %>">
+    <meta property="og:description" content="<%= website.description %>">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://buggles.ml/">
+    <meta name="twitter:card" content="summary_large_image">
+<% } %>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shadows+Into+Light">
+<script src="https://kit.fontawesome.com/9ab53b863c.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://momentjs.com/downloads/moment.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+</head>
