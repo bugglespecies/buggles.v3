@@ -12,6 +12,8 @@ const appCore           = express();
 const serverCore        = http.createServer(appCore);
 const io                = ioSockets(serverCore);
 
+require('./sockets.js')(io);
+
 appCore.use(helmet());
 appCore.use(flash());
 appCore.use(bodyParse.urlencoded({ extended: true }));
@@ -26,3 +28,11 @@ appCore.use((exprSession)({
 
 appCore.use(passport.initialize());
 appCore.use(passport.session());
+
+passport.serializeUser((user, done)=>{
+    done(null, user.id);
+});
+
+passport.deserializeUser((id, done)=>{
+    done(err, user);
+});
