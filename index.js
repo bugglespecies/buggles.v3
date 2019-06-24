@@ -1,3 +1,4 @@
+'use strict';
 const express           = require('express');
 const exprSession       = require('express-session');
 const passport          = require('passport');
@@ -28,6 +29,10 @@ appCore.use((exprSession)({
 
 appCore.use(passport.initialize());
 appCore.use(passport.session());
+
+passport.use(new sDiscord.Strategy({
+    clientID: 
+}))
 
 passport.serializeUser((user, done)=>{
     done(null, user.id);
