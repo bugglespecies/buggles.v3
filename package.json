@@ -1,0 +1,45 @@
+{
+  "name": "buggle-website",
+  "version": "0.0.0",
+  "description": "The Official Website for the Buggle Species",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "setup": "npm install -d",
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bugglespecies/buggles.v3.git"
+  },
+  "keywords": [
+    "buggles",
+    "node",
+    "javascript"
+  ],
+  "author": "YourNetworkNerd (https://twitter.com/YourNetworkNerd)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bugglespecies/buggles.v3/issues"
+  },
+  "homepage": "https://buggles.ml/",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "helmet": "^3.18.0",
+    "method-override": "^3.0.0",
+    "passport": "^0.4.0",
+    "passport-discord": "^0.1.3",
+    "passport-local": "^1.0.0",
+    "req-flash": "0.0.3",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
