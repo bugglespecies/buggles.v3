@@ -12,3 +12,4 @@ const appCore       = express();
 const serverCore    = http.createServer(appCore);
 const io            = ioSockets(serverCore);
 
+appCore.use(bodyParse.urlencoded({ extended: true }));
